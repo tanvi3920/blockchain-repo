@@ -1,0 +1,35 @@
+pragma solidity 0.4.18 <= 0.7.0;
+
+contract Studentdata {
+         
+         string Name ;
+         int RollNo ;
+         string StudentId ;
+         int Totalmarks ;
+        
+        function Studentdata ( string newName , int newRollNo , string newStudentId , int newTotalmrks ) public {
+            
+            Name = newName;
+             RollNo = newRollNo ;
+            StudentId = newStudentId ;
+            Totalmarks = newTotalmrks ;
+            
+        }
+         
+         function setStudentdata (   string newName , int newRollNo , string newStudentId , int newTotalmarks ) public {
+             
+               Name = newName;
+             RollNo = newRollNo ;
+             StudentId = newStudentId ;
+                Totalmarks = newTotalmarks ;
+            
+         }
+          
+         function getStudentdata () public view returns  (   string, int , string , int )  {
+             
+            return ( Name ,  RollNo , StudentId , Totalmarks ) ;
+            
+         }
+          
+    
+}
